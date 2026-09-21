@@ -12,7 +12,7 @@ MAX_LENGTH = 500
 
 
 def generate_qr_image(text, size=300, foreground_color="black", border_width=4):
-    """Generate a QR code image in memory and return it."""
+    
     qr = qrcode.QRCode(
         version=None,
         error_correction=qrcode.constants.ERROR_CORRECT_M,
@@ -36,7 +36,7 @@ def generate_qr_image(text, size=300, foreground_color="black", border_width=4):
 
 
 def looks_like_malformed_url(text):
-    """Return True when text appears to be a malformed HTTP or HTTPS URL."""
+    
     stripped = text.strip()
     if stripped.startswith("http://") or stripped.startswith("https://"):
         without_protocol = stripped.split("://", 1)[1]
@@ -46,7 +46,7 @@ def looks_like_malformed_url(text):
 
 
 def read_batch_csv(uploaded_file):
-    """Read a batch CSV and return valid rows plus rejection messages."""
+    
     raw_text = uploaded_file.getvalue().decode("utf-8-sig")
     reader = csv.DictReader(io.StringIO(raw_text))
 
@@ -83,7 +83,7 @@ def read_batch_csv(uploaded_file):
 
 
 def unique_filename(base_name, used_names):
-    """Return a filename that does not overwrite an earlier filename."""
+    
     candidate = base_name
     counter = 2
 
@@ -96,7 +96,7 @@ def unique_filename(base_name, used_names):
 
 
 def build_batch_zip(rows, size=300, foreground_color="black", border_width=4):
-    """Generate QR codes for valid rows and return a ZIP file in memory."""
+    
     output = io.BytesIO()
     used_names = set()
 
