@@ -1,0 +1,8 @@
+name,url
+Alice Smith,https://example.com/alice
+Bob Smith,https://example.com/bob
+Alice Smith,https://example.com/alice-again
+,https://example.com/missing-name
+Charlie Jones,
+"   ","   "
+Bad URL,not-a-url
