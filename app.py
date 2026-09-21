@@ -1,4 +1,3 @@
-```python
 import io
 
 import qrcode
@@ -121,4 +120,3 @@ if generate:
             file_name=filename,
             mime="image/png",
         )
-```
